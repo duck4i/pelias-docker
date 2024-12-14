@@ -5,6 +5,7 @@
   },
   "esclient": {
     "apiVersion": "7.5",
+    "requestTimeout": "600000",
     "hosts": [
       {
         "host": "elasticsearch"
