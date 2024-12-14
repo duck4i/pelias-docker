@@ -36,7 +36,7 @@
     },
     "openstreetmap": {
       "download": [
-        { "sourceURL": "ftp://ftp.kamioneto.com/maps/europe-latest.osm.pbf" }
+        { "sourceURL": "https://download.geofabrik.de/europe-latest.osm.pbf" }
       ],
       "leveldbpath": "/tmp",
       "datapath": "/data/openstreetmap",
