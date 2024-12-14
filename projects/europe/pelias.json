@@ -1,0 +1,67 @@
+{
+  "logger": {
+    "level": "info",
+    "timestamp": false
+  },
+  "esclient": {
+    "apiVersion": "7.5",
+    "requestTimeout": "600000",
+    "hosts": [
+      {
+        "host": "elasticsearch"
+      }
+    ]
+  },
+  "elasticsearch": {
+    "settings": {
+      "index": {
+        "refresh_interval": "10s",
+        "number_of_replicas": "0",
+        "number_of_shards": "12"
+      }
+    }
+  },
+  "api": {
+    "services": {
+      "placeholder": {
+        "url": "http://placeholder:4100"
+      },
+      "pip": {
+        "url": "http://pip:4200"
+      },
+      "interpolation": {
+        "url": "http://interpolation:4300"
+      },
+      "libpostal": {
+        "url": "http://libpostal:4400"
+      }
+    }
+  },
+  "imports": {
+    "adminLookup": {
+      "enabled": true
+    },
+    "geonames": {
+      "datapath": "/data/geonames",
+      "countryCode": "ALL"
+    },
+    "whosonfirst": {
+      "datapath": "/data/whosonfirst",
+      "importPostalcodes": true
+    },
+    "openstreetmap": {
+      "download": [
+        {
+          "sourceURL": "https://download.geofabrik.de/europe-latest.osm.pbf"
+        }
+      ],
+      "leveldbpath": "/tmp",
+      "datapath": "/data/openstreetmap",
+      "import": [
+        {
+          "filename": "europe-latest.osm.pbf"
+        }
+      ]
+    }
+  }
+}
